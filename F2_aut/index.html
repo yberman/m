@@ -2,6 +2,16 @@
 <script src="../p5.min.js"></script>
 
 <script>
+var state = "a";
+function rule1() {
+        console.log("rule1");
+}
+function rule2() {
+        console.log("rule2");
+}
+</script>
+
+<script>
 function setup() {
   createCanvas(400, 400);
 }
@@ -11,3 +21,7 @@ function draw() {
   ellipse(50,50,80,80);
 }
 </script>
+
+
+<button onclick="rule1()">Rule 1</button>
+<button onclick="rule2()">Rule 2</button>
