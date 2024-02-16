@@ -2,38 +2,38 @@
 <script src="../p5.min.js"></script>
 
 <script>
-var state = "a";
-function updateText() {
-    const w = document.querySelector("span#word");
-    w.innerText = state;
-}
-function rule1() {
-    console.log("rule1");
-    state =state.replace("a", "aB")
-    state =state.replace("b", "bA")
-    updateText();
-}
-function rule2() {
-    console.log("rule2");
-    state =state.replace("a", "Ba")
-    state =state.replace("b", "Ab")
-    updateText();
-}
+    // TODO: check if these are the right substitution rules
+    var state = "ab";
+    function updateText() {
+        const w = document.querySelector("span#word");
+        w.innerText = state;
+    }
+    function rule1() {
+        console.log("rule1");
+        state =state.replace("a", "aB")
+        state =state.replace("b", "bA")
+        updateText();
+    }
+    function rule2() {
+        console.log("rule2");
+        state =state.replace("a", "Ba")
+        state =state.replace("b", "Ab")
+        updateText();
+    }
 </script>
 
 <script>
     function setup() {
       createCanvas(400, 400);
     }
+
     function draw() {
         background(220);
-
         const RED = color(255, 0, 0);
         const GREEN = color(0, 255, 0);
         const BLUE = color(0, 0, 255);
-        const YELLOW = color(100, 100, 0);
+        const YELLOW = color(200, 200, 0);
         const GRAY = color(100, 100, 100);
-
         const n = state.length;
         const theta0 = 2 * Math.PI / n;
         const main_radius = 100;
@@ -47,12 +47,13 @@ function rule2() {
             noStroke();
             fill(c);
             circle(x, y, circle_radius);
-                console.log(x, y, circle_radius, c, chr)
+            console.log(x, y, circle_radius, c, chr)
         }
     }
 </script>
+
 <main>
-<h1>Word=<span id="word"></span></h1>
+<h1><span id="word"></span></h1>
 <button onclick="rule1()">Rule 1</button>
 <button onclick="rule2()">Rule 2</button>
 <script>updateText();</script>
