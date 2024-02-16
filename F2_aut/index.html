@@ -11,13 +11,13 @@
     function rule1() {
         console.log("rule1");
         state =state.replace("a", "aB")
-        state =state.replace("b", "bA")
+        state =state.replace("A", "bA")
         updateText();
     }
     function rule2() {
         console.log("rule2");
-        state =state.replace("a", "Ba")
         state =state.replace("b", "Ab")
+        state =state.replace("B", "Ba")
         updateText();
     }
 </script>
