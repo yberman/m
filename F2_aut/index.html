@@ -41,8 +41,8 @@ function rule2() {
         var circle_radius = 10;
         for (var i = 0; i < n; i++) {
             const theta = i*theta0;
-            const x = main_radius*cos(theta) + 50;
-            const y = main_radius*sin(theta) + 50;
+            const x = main_radius*cos(theta) + 200;
+            const y = main_radius*sin(theta) + 200;
             const chr = state.charAt(i);
             const c = chr == "a" ? RED : chr == "b" ? BLUE : chr == "A" ? GREEN : chr == "B" ? YELLOW : GRAY;
             noStroke();
