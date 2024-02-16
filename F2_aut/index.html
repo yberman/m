@@ -22,17 +22,19 @@ function rule2() {
 </script>
 
 <script>
-    const RED = color(255, 0, 0);
-    const GREEN = color(0, 255, 0);
-    const BLUE = color(0, 0, 255);
-    const YELLOW = color(100, 100, 0);
-    const GRAY = color(100, 100, 100);
-
     function setup() {
       createCanvas(400, 400);
     }
     function draw() {
         background(220);
+
+
+        const RED = color(255, 0, 0);
+        const GREEN = color(0, 255, 0);
+        const BLUE = color(0, 0, 255);
+        const YELLOW = color(100, 100, 0);
+        const GRAY = color(100, 100, 100);
+
         const n = state.length;
         const theta0 = 2 * Math.PI / n;
         const main_radius = 50;
