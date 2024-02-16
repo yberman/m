@@ -4,17 +4,17 @@
 <script>
 var state = "a";
 function updateText() {
-	const w = document.querySelector("span#word");
-	w.innerText = state;
+    const w = document.querySelector("span#word");
+    w.innerText = state;
 }
 function rule1() {
-        console.log("rule1");
-		state = 
-		updateText();
+    console.log("rule1");
+    state += "a"
+    updateText();
 }
 function rule2() {
         console.log("rule2");
-		updateText();
+    updateText();
 }
 </script>
 
