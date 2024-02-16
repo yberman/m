@@ -28,7 +28,6 @@ function rule2() {
     function draw() {
         background(220);
 
-
         const RED = color(255, 0, 0);
         const GREEN = color(0, 255, 0);
         const BLUE = color(0, 0, 255);
@@ -37,8 +36,8 @@ function rule2() {
 
         const n = state.length;
         const theta0 = 2 * Math.PI / n;
-        const main_radius = 50;
-        var circle_radius = 10;
+        const main_radius = 100;
+        var circle_radius = 20;
         for (var i = 0; i < n; i++) {
             const theta = i*theta0;
             const x = main_radius*cos(theta) + 200;
@@ -48,7 +47,7 @@ function rule2() {
             noStroke();
             fill(c);
             circle(x, y, circle_radius);
-                console.log(x, y, circle_radius, c)
+                console.log(x, y, circle_radius, c, chr)
         }
     }
 </script>
