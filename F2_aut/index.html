@@ -9,14 +9,14 @@ function updateText() {
 }
 function rule1() {
     console.log("rule1");
-    state.replace("a", "aB")
-    state.replace("b", "bA")
+    state =state.replace("a", "aB")
+    state =state.replace("b", "bA")
     updateText();
 }
 function rule2() {
     console.log("rule2");
-    state.replace("a", "Ba")
-    state.replace("b", "Ab")
+    state =state.replace("a", "Ba")
+    state =state.replace("b", "Ab")
     updateText();
 }
 </script>
