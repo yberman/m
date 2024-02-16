@@ -9,24 +9,45 @@ function updateText() {
 }
 function rule1() {
     console.log("rule1");
-    state += "a"
+    state.replace("a", "aB")
+    state.replace("b", "bA")
     updateText();
 }
 function rule2() {
-        console.log("rule2");
+    console.log("rule2");
+    state.replace("a", "Ba")
+    state.replace("b", "Ab")
     updateText();
 }
 </script>
 
 <script>
-function setup() {
-  createCanvas(400, 400);
-}
+    const RED = color(255, 0, 0);
+    const GREEN = color(0, 255, 0);
+    const BLUE = color(0, 0, 255);
+    const YELLOW = color(100, 100, 0);
+    const GRAY = color(100, 100, 100);
 
-function draw() {
-  background(220);
-  ellipse(50,50,80,80);
-}
+    function setup() {
+      createCanvas(400, 400);
+    }
+    function draw() {
+        background(220);
+        const n = state.length;
+        const theta0 = 2 * Math.PI / n;
+        const main_radius = 50;
+        const circle_radius = sin(thet0)*.7;
+        for (var i = 0; i < n; i++) {
+            const theta = i*theta0;
+            const x = main_radius*cos(theta);
+            const y = main_radius*sin(theta);
+            const chr = state.charAt(i);
+            const c = chr == "a" ? RED : chr == "b" ? BLUE : chr == "A" ? GREEN : chr == "B" ? YELLOW : GRAY;
+            noStroke();
+            fill(c);
+            circle(x, y, circle_radius);
+        }
+    }
 </script>
 <main>
 <h1>Word=<span id="word"></span></h1>
